@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800&family=Poppins:ital,wght@0,200;0,400;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  color: white;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.nav {
+  height: 140px;
+  width: 100%;
+  /*background-color: red;*/
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0px 150px;
+  gap: 50px;
+  position: fixed;
+  z-index: 99;
+}
+.cursor {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: rgb(147, 243, 83);
+  position: fixed;
+  z-index: 99;
+}
+.cursor_blur {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: rgb(143, 233, 84);
+  position: fixed;
+  z-index: 9;
+  filter: blur(300px);
+}
+img {
+  height: 60px;
+  font-weight: 500;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+}
+.main {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.221);
+}
+.page1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 10;
+}
+.page1 h1 {
+  font-size: 90px;
+  font-weight: 900;
+  position: relative;
+}
+.page1 h1::before {
+  content: "EAT. DRINK. PLAY.";
+  position: absolute;
+  color: black;
+  z-index: -1;
+  top: -5px;
+  left: -4px;
+  -webkit-text-stroke: 2px rgb(107, 230, 25);
+}
+.page1 h2 {
+  font-size: 26px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 10px 0px 20px 0px;
+}
+.page1 p {
+  font-size: 18px;
+  font-weight: 600;
+  width: 47%;
+}
+.page2 {
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+.scroller {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+}
+.scroller1 {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: scroll;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+.scroller h4:hover {
+  color: rgb(175, 255, 215);
+}
+
+.scroller h4 {
+  display: inline-block;
+  font-size: 90px;
+  font-weight: 900;
+  font-family: cursive;
+  margin-right: 10px;
+  transition: all linear 0.5s;
+  -webkit-text-stroke: 2px rgb(127, 127, 184);
+  color: transparent;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.about_us {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+.about_us img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin: 30px 70px 0px 70px;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 2em;
+  gap: 1.5em;
+  font-size: 1.1em;
+  font-weight: 900;
+}
+.about h3 {
+  font-size: 2em;
+  font-weight: 1300px;
+}
+.cards {
+  height: 650px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all ease 1.6s;
+}
+.card {
+  height: 550px;
+  /*background-color: cadetblue;*/
+  margin: 50px;
+  width: 27vw;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+#card1 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card2 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card3 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(85, 223, 80);
+  padding-top: 160px;
+  padding: 40px;
+  line-height: 2em;
+  font-weight: 900;
+  opacity: 0;
+  transition: all ease 0.6s;
+  border-radius: 30px;
+}
+.overlay h4 {
+  font-size: 27px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  line-height: 50px;
+  color: black;
+}
+.overlay p {
+  color: black;
+}
+.cards:hover .overlay {
+  opacity: 1;
+  transform: rotate3d(1, 1, 0, 20deg);
+}
+.strip {
+  display: flex;
+  background: linear-gradient(135deg, green, rgb(182, 240, 68));
+  height: 30vh;
+  object-fit: cover;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+.strip img {
+  height: 100%;
+  z-index: 0;
+  width: 14%;
+}
+.strip h4 {
+  width: 45%;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 900;
+  line-height: 40px;
+  text-align: center;
+}
+
+.page3 {
+  height: 100vh;
+  width: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.page3 .img1 {
+  top: 30%;
+  left: 15%;
+}
+.page3 .img2 {
+  bottom: 30%;
+  right: 20%;
+}
+.page3 img {
+  height: 40px;
+  position: absolute;
+}
+.page3 p {
+  width: 60%;
+  font-size: 1.5em;
+  position: absolute;
+  font-weight: 800;
+  line-height: 40px;
+}
+.page4 {
+  height: 50vh;
+  width: 100vw;
+  background-color: black;
+  position: relative;
+}
+.lastcards {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  text-align: center;
+}
+.last {
+  background-color: green;
+  height: 140px;
+  width: 370px;
+  border-radius: 30px;
+  padding-top: 50px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: black;
+  z-index: 5;
+}
+.last:hover {
+  background: url();
+}
+#last1:hover {
+  color: white;
+}
+#last2 {
+}
+#last3 {
+}
+.page4 h1 {
+  position: absolute;
+  display: flex;
+  top: 10%;
+  left: 8%;
+  font-size: 4.5em;
+  font-weight: 900;
+  z-index: 1;
+  color: black;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  text-wrap: inherit;
+}
+.page4 h1:hover {
+  color: #fff; 
+}
